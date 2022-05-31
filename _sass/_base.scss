@@ -60,6 +60,12 @@ blockquote {
   text-align: center;
 }
 
+//News
+
+.news_date{
+  width: 6rem;
+}
+
 // Card
 
 .card {
@@ -256,6 +262,24 @@ blockquote {
   }
 }
 
+.social_small {
+  text-align: center;
+  .contact-icons {
+    font-size: 2rem;
+    a {
+      i::before {
+        color: var(--global-text-color);
+        transition-property: all 0.2s ease-in-out;
+      }
+      &:hover {
+        i::before {
+          color: var(--global-theme-color);
+        }
+      }
+    }
+  }
+}
+
 
 // Footer
 footer.fixed-bottom {
@@ -419,11 +443,14 @@ footer.sticky-bottom {
   }
   h2.year {
     color: var(--global-divider-color);
-    border-top: 1px solid var(--global-divider-color);
+    border-bottom: 1px solid var(--global-divider-color);
     padding-top: 1rem;
     margin-top: 2rem;
-    margin-bottom: -2rem;
-    text-align: right;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+  img.teaser {
+    border: 2px solid var(--global-divider-color);
   }
   ol.bibliography {
     list-style: none;
@@ -456,6 +483,7 @@ footer.sticky-bottom {
         font-weight: bolder;
       }
       .author {
+        font-size: 0.9rem;
         a {
           border-bottom: 1px dashed var(--global-theme-color);
           &:hover {
@@ -557,6 +585,8 @@ html.transition *:after {
 
 // Extra Markdown style (post Customization)
 .post{
+  text-align: justify;
+  text-justify: inter-word;
   .post-meta{
     color: var(--global-text-color-light);
     font-size: 0.875rem;
