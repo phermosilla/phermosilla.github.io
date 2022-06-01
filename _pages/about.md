@@ -20,9 +20,3 @@ During my research, I applied these technologies to solve different problems in 
 
 Before joining Ulm Universtiy, I obtained my PhD at Polytechnical University of Catalonia, under the supervision of [Prof. Pere-Pau Vazquez](https://www.cs.upc.edu/~ppau/) and [Prof. Alvar Vinacua](https://www.cs.upc.edu/~alvar/) on the topic of Computer Graphics and Visualization algorithms for Molecular Dynamics Simulations analysis.
 
-### PhD Students
-
-- [Hannah Kniesel](https://www.uni-ulm.de/in/mi/institut/mitarbeiter/hannah-kniesel/) (with Timo Ropinski)
-- [Michael Schelling](https://www.uni-ulm.de/in/mi/institut/mitarbeiter/michael-schelling/) (with Timo Ropinski)
-- [Sebastian Hartwig](https://www.uni-ulm.de/in/mi/institut/mitarbeiter/sebastian-hartwig/) (with Timo Ropinski)
-- [Sebastian Koch](https://kochsebastian.com/) (with Timo Ropinski and Bosch Research)
