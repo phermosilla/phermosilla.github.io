@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2022-03-02 23:59:00-0400
+date: 2023-10-15 23:59:00-0400
 inline: true
 ---
 
-We have **two papers** accepted at **CVPR 2022**, the work of **Hannah Kniesel** on 3D reconstruction from electron microscope tomography images and the work of **Michael Schelling** on time-of-flight image denoising.
+Our paper in collaboration with **Bosch Research** and **Ulm University** on language-based pre-training for scene graph prediction has been accepted into **3DV 2024**. Congratulations to [Sebastian Koch](https://kochsebastian.com/)!

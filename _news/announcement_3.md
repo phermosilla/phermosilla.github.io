@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2022-07-04 23:59:00-0400
+date: 2023-10-20 23:59:00-0400
 inline: true
 ---
 
-Our paper to initialize weigths of point convolutional neural networks has been accepted at **ECCV 2022**.
+The works of [Lisa Weijler](https://cvl.tuwien.ac.at/staff/lisa-magdalena-weijler/) and [Sebastian Koch](https://kochsebastian.com/) have been accepted into **WACV 2024**.

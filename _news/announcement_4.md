@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2022-10-12 23:59:00-0400
+date: 2023-12-27 23:59:00-0400
 inline: true
 ---
 
-Our paper *Weakly-Supervised Optical Flow Estimation for Time-of-Flight* has been accepted at **WACV 2023**.
+The paper of [Philipp Erle](https://www.cg.tuwien.ac.at/staff/PhilippErler) on surface reconstruction from point clouds has been accepted on **Computer Graphics Forum**.

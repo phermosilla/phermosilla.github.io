@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2022-01-24 23:59:00-0400
+date: 2022-12-01 23:59:00-0400
 inline: true
 ---
 
-Our research collaboration with **Prof. Michael Wimmer** from TU-Wien has resulted in the paper *Gaussian Mixture Convolution Networks* being accepted at **ICLR 2022**.
+I am happy to announce that I have joined the [Computer Vision Lab](https://cvl.tuwien.ac.at/) at TU Wien as an **Assistant Professor** of AI for Visual Computing.
