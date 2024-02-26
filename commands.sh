@@ -1,5 +1,6 @@
 #docker run --shm-size=512m -p 80:4000 --privileged -it -v ${PWD}:/working_dir -w /working_dir ubuntu
-docker run --shm-size=512m -p 8080:8080 --privileged -it -v "%cd%":/working_dir -w /working_dir ubuntu
+#docker run --shm-size=512m -p 8080:8080 --privileged -it -v "%cd%":/working_dir -w /working_dir ubuntu
+
 apt-get update
 apt-get install imagemagick
 apt-get install ruby-full
