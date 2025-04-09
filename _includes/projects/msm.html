@@ -1,0 +1,325 @@
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Masked Scene Modeling: Narrowing the Gap Between Supervised and Self-Supervised Learning in 3D Scene Understanding.">
+  <meta name="keywords" content="Self-supervised learning, representation learning, 3D scene understanding, Point clouds">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Masked Scene Modeling: Narrowing the Gap Between Supervised and Self-Supervised Learning in 3D Scene Understanding</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/projects/msm/static/css/bulma.min.css">
+  <link rel="stylesheet" href="/assets/projects/msm/static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="/assets/projects/msm/static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="/assets/projects/msm/static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="/assets/projects/msm/static/css/index.css">
+  <link rel="icon" href="/assets/projects/msm/static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="/assets/projects/msm/static/js/fontawesome.all.min.js"></script>
+  <script src="/assets/projects/msm/static/js/bulma-carousel.min.js"></script>
+  <script src="/assets/projects/msm/static/js/bulma-slider.min.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-3 publication-title">Masked Scene Modeling: Narrowing the Gap Between<br>Supervised and Self-Supervised Learning in<br>3D Scene Understanding</h1>
+          <h2 class="subtitle is-4 publication-subtitle">CVPR 2025</h2>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://phermosilla.github.io/">Pedro Hermosilla</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.at/citations?user=Vf9eONQAAAAJ&hl=en">Christian Stippel</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://leonsick.github.io/">Leon Sick</a><sup>2</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>TU Wien</span>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            <span class="author-block"><sup>2</sup>Ulm University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2403.11691"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/phermosilla/msm"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="/assets/projects/msm/static/images/teaser.png" alt="teaser"/>
+      <div class="column has-text-centered">
+        <b>Self-Supervised Feature Visualization using PCA.</b>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Self-supervised learning has transformed 2D computer vision by enabling models trained on large, 
+            unannotated datasets to provide versatile off-the-shelf features that perform similarly to models trained with labels. 
+            However, in 3D scene understanding, self-supervised methods are typically only used as a weight initialization step 
+            for task-specific fine-tuning, limiting their utility for general-purpose feature extraction.  
+            This paper addresses this shortcoming by proposing a robust evaluation protocol specifically designed to assess 
+            the quality of self-supervised features for 3D scene understanding. 
+            Our protocol uses multi-resolution feature sampling of hierarchical models to create rich point-level representations 
+            that capture the semantic capabilities of the model and, hence, are suitable for evaluation with linear probing and nearest-neighbor methods.
+            Furthermore, we introduce the first self-supervised model that performs similarly to supervised models when only off-the-shelf 
+            features are used in a linear probing setup.
+            In particular, our model is trained natively in 3D with a novel self-supervised approach based on a Masked Scene Modeling objective, 
+            which reconstructs deep features of masked patches in a bottom-up manner and is specifically tailored to hierarchical 3D models. 
+            Our experiments not only demonstrate that our method achieves competitive performance to supervised models, but also surpasses existing 
+            self-supervised approaches by a large margin. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<!-- Motivation. -->
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Motivation</h2>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+
+        <div class="column">
+          <div class="content has-text-justified">
+            <p>
+              Existing self-supervised methods for 3D scene understanding... 
+            </p>
+            <ul>
+              <li>...are only used as a weight initialization step for further fine-tuning.</li>
+              <li>...are trained by reconstructing input features of the point cloud instead of deep features of the model.</li>
+              <li>...mask the input features of 3D points letting the model infer those from the geometry.</li>
+              <li>...do not consider the hierarchical nature of their models when designing the reconstruction loss.</li>
+            </ul>            
+          </div>
+        </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Methods. -->
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method</h2>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column">
+        <img src="/assets/projects/msm/static/images/method.gif" alt="method"/>
+        <div class="content has-text-justified">
+          <p>
+            Our method receives as input a 3D scene represented as a pointcloud, <b>(a)</b>. The scene is voxelized into two different views, 
+            <b>(b)</b>, and then further cropped and masked, <b>(c)</b>. The student model first encodes the cropped views and then adds the 
+            masked voxels with a learnable token, <b>(d)</b>. The decoder processes the cropped views and reconstructs deep features of the 
+            masked tokens, <b>(e)</b>. The loss is computed in a cross-view manner where the target features, <b>(f)</b>, are obtained from 
+            a teacher model which parameters are updated with the Exponential Moving Average (EMA) of the parameters of the student, <b>(g)</b>.
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Evaluation. -->
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Quantitative Evaluation</h2>
+      </div>
+    </div>
+
+    <div class="columns is-vcentered">
+      <div class="column">
+        <div class="content has-text-justified">
+          <h2 class="title is-5">Self-Supervised Pre-Training </h2>
+          <p>
+            We pre-train our self-supervised model on the Scannet dataset. We then freeze our model and evaluate the representations
+            learned with a linear probing and a nearest-neighbor evaluation protocol (see paper for more details).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-vcentered">
+
+      <div class="column">
+        <div class="content has-text-justified">
+          <h2 class="title is-5">Semantic Segmentation</h2>
+          <img src="/assets/projects/msm/static/images/semseg.png" alt="semantic segmentation"/>          
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content has-text-justified">
+          <h2 class="title is-5">Efficiency Bechmark</h2>
+          <img src="/assets/projects/msm/static/images/efficiency.png" alt="efficiency benchmark"/>          
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="columns is-vcentered">
+
+      <div class="column">
+        <div class="content has-text-justified">
+          <h2 class="title is-5">Instance Segmentation</h2>
+          <img src="/assets/projects/msm/static/images/instseg.png" alt="instance segmentation"/>          
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content has-text-justified">
+          <h2 class="title is-5">3D Visual Grounding</h2>
+          <img src="/assets/projects/msm/static/images/visualground.png" alt="3d visual grounding"/>          
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Evaluation. -->
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+          <h2 class="title is-3">Qualitative Evaluation</h2>
+          <p>
+            We reduce the point features obtained with our self-supervised model to three dimensions using PCA and visualize them as colors. 
+            Features learned by our model are semantic-aware, which is visible from the color separation: Similar objects result in similar features
+            while different objects result in different features.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-vcentered">
+      <div class="column">
+        <img src="/assets/projects/msm/static/images/qualitative.jpg" alt="qualiative"/>          
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{hermosilla2025msm,
+      title={Masked Scene Modeling: Narrowing the Gap Between Supervised and Self-Supervised Learning in 3D Scene Understanding},
+      author={Hermosilla, P. and Stippel, C. and Sick, L.},
+      journal={Conference on Computer Vision and Pattern Recognition (CVPR)},
+      year={2025},
+      }</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://arxiv.org/abs/2403.11691">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://phermosilla.github.io/tttkd/" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Original template from <a
+              href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
